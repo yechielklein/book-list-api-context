@@ -1,3 +1,5 @@
+import './index.css';
+
 import { useState } from 'react';
 
 import BookList from './components/BookList';
