@@ -23,7 +23,7 @@ const App = () => {
 	};
 
 	const deleteBook = id => {
-		console.log(`Book with id of ${id} deleted`);
+		setBooks(books.filter(book => book.id !== id));
 	};
 	
 	return (
