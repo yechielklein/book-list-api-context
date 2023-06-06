@@ -27,9 +27,8 @@ const App = () => {
 	};
 	
 	return (
-		<div>
+		<div className="app">
 			<h1>Books</h1>
-			<hr />
 			<BookList
 				books={books}
 				onEdit={editBook}

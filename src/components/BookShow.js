@@ -2,12 +2,11 @@ import BookEdit from './BookEdit';
 
 const BookShow = ({ book }) => {
 	return (
-		<div>
+		<div className="book-show">
 			<h3>{book.title}</h3>
 			<button>edit</button>
 			<button>delete</button>
 			<BookEdit />
-			<hr />
 		</div>
 	);
 };
