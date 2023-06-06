@@ -30,7 +30,11 @@ const App = () => {
 		<div>
 			<h1>Books</h1>
 			<hr />
-			<BookList onEdit={editBook} onDelete={deleteBook} />
+			<BookList
+				books={books}
+				onEdit={editBook}
+				onDelete={deleteBook}
+			/>
 			<BookCreate onCreate={createBook} />
 		</div>
 	);

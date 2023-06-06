@@ -1,9 +1,9 @@
 import BookEdit from './BookEdit';
 
-const BookShow = ({ title }) => {
+const BookShow = ({ book }) => {
 	return (
 		<div>
-			<h3>{title}</h3>
+			<h3>{book.title}</h3>
 			<button>edit</button>
 			<button>delete</button>
 			<BookEdit />

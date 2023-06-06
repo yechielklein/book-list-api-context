@@ -1,11 +1,11 @@
 import BookShow from './BookShow';
 
-const BookList = () => {
+const BookList = ({ books }) => {
+	const renderedBooks = books.map(book => <BookShow book={book} key={book.id} />);
+
 	return (
 		<div>
-			<BookShow title="book1" />
-			<BookShow title="book2" />
-			<BookShow title="book3" />
+			{renderedBooks}
 		</div>
 	);
 };
