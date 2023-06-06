@@ -9,7 +9,13 @@ const App = () => {
 	const [books, setBooks] = useState([]);
 
 	const createBook = (title) => {
-		console.log(`Book with Title of '${title}' Created`);
+		setBooks([
+			...books,
+			{
+				id: Math.round(Math.random() * 9999),
+				title
+			}
+		]);
 	};
 
 	const editBook = (id, title) => {
