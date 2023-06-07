@@ -19,7 +19,13 @@ const App = () => {
 	};
 
 	const editBook = (id, title) => {
-		console.log(`Book with id of ${id} updated title: ${title}`);
+		setBooks(books.map(book => {
+			if (book.id === id) {
+				return { ...book, title };
+			};
+
+			return book;
+		}));
 	};
 
 	const deleteBook = id => {

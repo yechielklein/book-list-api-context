@@ -1,9 +1,26 @@
-const BookEdit = () => {
+import { useState } from 'react';
+
+const BookEdit = ({ book, onEdit }) => {
+	const [title, setTitle] = useState(book.title);
+
+	const handleChange = event => {
+		setTitle(event.target.value);
+	};
+
+	const handleSubmit = event => {
+		event.preventDefault();
+		onEdit(book.id, title);
+	};
+
 	return (
-		<form>
-			<label>Title: </label>
-			<input />
-			<button>Save</button>
+		<form className="book-edit" onSubmit={handleSubmit}>
+			<label>Title</label>
+			<input
+				className="input"
+				value={title}
+				onChange={handleChange}
+			/>
+			<button className="button is-primary">Save</button>
 		</form>
 	);
 };
