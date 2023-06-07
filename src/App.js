@@ -34,7 +34,7 @@ const App = () => {
 	
 	return (
 		<div className="app">
-			<h1>Books</h1>
+			<h1>Reading List</h1>
 			<BookList
 				books={books}
 				onEdit={editBook}
