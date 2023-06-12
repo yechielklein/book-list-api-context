@@ -20,12 +20,13 @@ const App = () => {
 	}, []);
 
 	const createBook = async title => {
+		const response = await axios.post('http://localhost:3001/books', {
+			title
+		});
+		
 		setBooks([
 			...books,
-			{
-				id: Math.round(Math.random() * 9999),
-				title
-			}
+			response.data
 		]);
 	};
 
