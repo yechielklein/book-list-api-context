@@ -47,7 +47,9 @@ const App = () => {
 		}));
 	};
 
-	const deleteBook = id => {
+	const deleteBook = async id => {
+		await axios.delete(`http://localhost:3001/books/${id}`);
+		
 		setBooks(books.filter(book => book.id !== id));
 	};
 	
